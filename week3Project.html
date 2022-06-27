@@ -6,24 +6,49 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dungeons & Dragons</title>
     <style>
+        :root{
+            --red: rgb(192, 30, 30);
+        }
         button {
             display: block;
+            background-color: black;
+            color: var(--red);
+            font-family: fantasy;
         }
       h1 {
         font-family: fantasy;
-        color: rgb(147, 37, 37);
-        margin: 0 auto;
+        color: var(--red);
+        margin: 11px auto;
+        text-align: center;
       }
       h2 {
         font-family: fantasy;
-        margin: 0px;
+        margin: 10px 0px;
+        padding: 13px;
+        border: 3px double var(--red);
+        border-radius: 3px;
+        line-height: 1.5;
+        text-align: center;
+      }
+      p{
+        line-height: 1.5;
+        font-size: 14px;
       }
       .hero {
-        border-color: rgb(147, 37, 37);
-        width: 500px;
+        display:block;
+        border-color: var(--red);
+        max-width: 80%;
         border-style: double;
-        border-width: 11px;
+        border-width: 3px;
         border-radius: 3px;
+      }
+      .link{
+        text-decoration: none;
+        color:var(--red);
+        font-family: fantasy;
+      }
+      .link:hover{
+        text-decoration: underline;
       }
     </style>
   </head>
@@ -45,9 +70,9 @@
       initial rule system. D&D's publication is commonly recognized as the
       beginning of modern role-playing games and the role-playing game industry.
     </p>
-    <a href = https://en.wikipedia.org/wiki/Dungeons_%26_Dragons target = _blank>Learn More About D&D's History</a>
+    <a class = link href = https://en.wikipedia.org/wiki/Dungeons_%26_Dragons target = _blank>Learn More About D&D's History</a>
     <button>Try an Automated Monster Hunter!</button>
-    Page and Monster Hunter brought to you by <a href=https://github.com/batgal/ target="_blank">Katlyn Green
+    Page and Monster Hunter brought to you by <a class =link href=https://github.com/batgal/ target="_blank">Katlyn Green
   </body>
   <script></script>
 </html>
