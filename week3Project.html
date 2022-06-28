@@ -5,7 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dungeons & Dragons</title>
+    <link rel="icon" type="image/x-icon" href="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/038/881/original/dnd.png?1656378150">
     <style>
+        
         :root{
             --red: rgb(192, 30, 30);
         }
@@ -24,6 +26,7 @@
             padding: 20px 30px;
             font-size: 15px;
             box-shadow: 5px 5px 5px rgba(0,0,0,0.3);
+            transition: all 300ms ease-in-out;
         }
         button:hover{
             background: var(--red);
@@ -41,6 +44,7 @@
         box-shadow: 5px 5px 5px rgba(0,0,0,0.3);
         border: 3px double black;
         border-radius: 3px;
+        
         }
       h1 {
         font-family: fantasy;
@@ -56,6 +60,7 @@
         border-radius: 3px;
         line-height: 1.5;
         text-align: center;
+        box-sizing: border-box;
       }
       p{
         line-height: 1.5;
@@ -66,6 +71,9 @@
         max-width: 600px;
         margin: 0 auto;
         padding: 30px;
+      }
+      .fantasy{
+        font-family: fantasy;
       }
       .footer{
         text-align: center;
@@ -79,6 +87,7 @@
         border-width: 3px;
         border-radius: 3px;
         margin: 0 auto;
+        
       }
       .link{
         text-decoration: none;
@@ -93,27 +102,29 @@
   </head>
   <body>
     <div class = container>
-    <h1>Introduction to Dungeons & Dragons</h1>
-    <h2>For Very, Very New Players</h2>
-    <img
+        <h1>Introduction to Dungeons & Dragons</h1>
+        <h2>For Very, Very New Players</h2>
+    </br>
+        <img
       class="hero"
       src="https://cconnect.s3.amazonaws.com/wp-content/uploads/2019/08/Funko-Pop-Dungeons-Dragons-figures-thumb-650.jpg"
-      alt="Retro Dungeons & Dragons Player's Manual Cover"
-    />
-    <p>
-      Dungeons & Dragons (commonly abbreviated as D&D or DnD) is a fantasy
+      alt="Retro Dungeons & Dragons Player's Manual Cover"/>
+        <p>
+      <strong>Dungeons & Dragons</strong> (commonly abbreviated as <strong>D&D</strong> or <strong>DnD</strong>) is a fantasy
       tabletop role-playing game (RPG) originally designed by Gary Gygax and
       Dave Arneson. It was first published in 1974 by Tactical Studies Rules,
-      Inc. (TSR). It has been published by Wizards of the Coast (now a
+      Inc. (TSR). It has been published by <a class="link" href="https://company.wizards.com/en" target =_blank> Wizards of the Coast</a> (now a
       subsidiary of Hasbro) since 1997. The game was derived from miniature
       wargames, with a variation of the 1971 game Chainmail serving as the
-      initial rule system. D&D's publication is commonly recognized as the
-      beginning of modern role-playing games and the role-playing game industry.
-    </p>
-    <a class = link href = https://en.wikipedia.org/wiki/Dungeons_%26_Dragons target = _blank>Learn More About D&D's History</a>
-    <button class="monster">Try an Automated Monster Hunter!</button>
-    <p class =footer>
-    Page and Monster Hunter brought to you by <a class =link href=https://github.com/batgal/ target="_blank">Katlyn Green</p>
+      initial rule system. <em>D&D's publication is commonly recognized as the
+      beginning of modern role-playing games and the role-playing game industry.</em>
+        </p>
+        
+        <a class = link href = https://en.wikipedia.org/wiki/Dungeons_%26_Dragons target = _blank>Learn More About D&D's History</a>
+     <button class="monster">Try an Automated Monster Hunter!</button>
+        </hr>
+        <p class =footer>
+        <span class=fantasy>Page</span> and <span class=fantasy>Monster Hunter</span> brought to you by <a class =link href=https://github.com/batgal/ target="_blank">Katlyn Green</p>
     </div>
   </body>
 
@@ -121,10 +132,10 @@
     function hunt(){
         let name = prompt("What is your name?");
         let email = prompt("What is your email address?");
-
-        alert("Thank you " + name + "! We will be in touch via email. Enjoy your Monster Hunting!")
-
-        window.open('https://batgal.github.io/TeamMercuryProject1/', '_blank');
+        if (name.length > 0 && email.length >0 ){
+            alert("Thank you " + name + "! We will be in touch via email. Enjoy your Monster Hunting!")
+            window.open('https://batgal.github.io/TeamMercuryProject1/', '_blank');} else{
+            alert("Please provide BOTH your name and email to proceed! Thank you!")}
 
     }
     let monsterHunter = document.querySelector(".monster");
